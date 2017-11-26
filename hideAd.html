@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+
+<body>
+
+<p>This image is an ad.</p>
+<div><img src = "hideAD.png"></div>
+<p>This image is not ad.</p>
+<div><img src = "hideAD-nonAd.png"></div>
+<script type="text/javascript">
+
+var imgs =  document.getElementsByTagName("img");  // Search all image files inside the document
+for (var i =0; i < imgs.length; i++) {
+	var img= imgs[i];
+	if (img.width == 468 && img.height == 60)
+		img.style.visibility = "hidden";
+}
+</script>
+</body>
+</html>
